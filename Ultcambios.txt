@@ -1,1 +1,3 @@
 --Ultimos cambios realizados
+-Cambio de label "Nombre Abreviado" a "Nombre Corto" en Aseguradoras
+
