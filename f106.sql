@@ -33,7 +33,7 @@ prompt APPLICATION 106 - SOPORTE
 -- Application Export:
 --   Application:     106
 --   Name:            SOPORTE
---   Date and Time:   16:36 Thursday December 7, 2023
+--   Date and Time:   20:05 Tuesday December 12, 2023
 --   Exported By:     KADMIN
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -135,7 +135,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_02=>'APP_EMAIL'
 ,p_substitution_value_02=>'edwin.antigua@gmail.com'
 ,p_last_updated_by=>'KADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20231115132011'
+,p_last_upd_yyyymmddhh24miss=>'20231212195542'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>14
 ,p_print_server_type=>'NATIVE'
@@ -23504,8 +23504,8 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'SOPORTE'
-,p_last_upd_yyyymmddhh24miss=>'20230804163124'
+,p_last_updated_by=>'KADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20231212194842'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(36158294971188793)
@@ -23529,6 +23529,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_query_type=>'TABLE'
 ,p_query_table=>'ORDENES_SOPORTE'
 ,p_query_where=>'ESTADO IN (SELECT ID FROM ESTADO_ORDEN WHERE ID <> ''Z'' AND TIPO IN(''A'',''B'',''C'',''S'',''T''))'
+,p_query_order_by_type=>'STATIC'
+,p_query_order_by=>'FECHA DESC'
 ,p_include_rowid_column=>false
 ,p_plug_source_type=>'NATIVE_IG'
 ,p_prn_content_disposition=>'ATTACHMENT'
@@ -38043,8 +38045,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'10'
-,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20230401124503'
+,p_last_updated_by=>'KADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20231212195542'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(17510421219918454)
@@ -38242,7 +38244,7 @@ wwv_flow_imp_page.create_page_plug(
 '    and c.compania=oz.compania and c.id=oz.cliente_id and c.estado=''A'')',
 '',
 '        loop',
-'            htp.p(''<div class="div1"><b><i>Factura-''||htf.escape_sc(o.mid)||''</i></b></div><div id="qrcode"></div> ',
+'            htp.p(''<div class="div1"><b><i>Orden-''||htf.escape_sc(o.mid)||''</i></b></div><div id="qrcode"></div> ',
 '            <table style="width: 80%;"><tr><th style="background-color:white";>&nbsp;</th></tr></table>'');       ',
 '            if (o.estado=''A'') then',
 '              htp.p(''<div class="watermark">(POR CONFIRMAR)</div>'');',
