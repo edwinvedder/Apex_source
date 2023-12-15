@@ -33,7 +33,7 @@ prompt APPLICATION 106 - SOPORTE
 -- Application Export:
 --   Application:     106
 --   Name:            SOPORTE
---   Date and Time:   20:05 Tuesday December 12, 2023
+--   Date and Time:   17:57 Friday December 15, 2023
 --   Exported By:     KADMIN
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -135,7 +135,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_02=>'APP_EMAIL'
 ,p_substitution_value_02=>'edwin.antigua@gmail.com'
 ,p_last_updated_by=>'KADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20231212195542'
+,p_last_upd_yyyymmddhh24miss=>'20231215161810'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>14
 ,p_print_server_type=>'NATIVE'
@@ -31214,8 +31214,8 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_help_text=>'Aqu&iacute; puede generar la factura basada en una cotizaci&oacute;n existente y seleccionando el tipo de factura que desea.'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20230612114640'
+,p_last_updated_by=>'KADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20231215161810'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(16441049244347974)
@@ -32709,7 +32709,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_imp.id(16441049244347974)
 ,p_display_as=>'NATIVE_HIDDEN'
-,p_attribute_01=>'Y'
+,p_attribute_01=>'N'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(16851008234079539)
@@ -32838,7 +32838,7 @@ wwv_flow_imp_page.create_page_da_action(
 '  FETCH C1 INTO DUMMY;',
 '  IF C1%FOUND THEN',
 '    IF :P19_FACID > 0 OR :P19_FACID <> NULL THEN',
-'      APROBAR_FACTURA(:P19_COTIZACION,:P19_FACID);',
+'      APROBAR_FACTURA(:P19_FACID);',
 '    END IF;',
 '  END IF;',
 '  EXCEPTION WHEN OTHERS THEN',
