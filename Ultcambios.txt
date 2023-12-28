@@ -2,4 +2,5 @@
 -08122023-Ripara- Cambio de label "Nombre Abreviado" a "Nombre Corto" en Aseguradoras
 -12122023-Soporte- Cambio de orden a las ordenes de soporte fecha descendente
 -12122023-Soporte- Orden por Factura en el Rep Orden
+-28122023-Nada ult act del anio
 
